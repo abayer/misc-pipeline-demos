@@ -19,9 +19,7 @@ pipeline {
     // tool isn't listed in the possible values, open a JIRA against that tool!)
     // and installations configured in your Jenkins master's tools configuration.
     jdk "jdk8"
-    // Uh-oh, this is going to cause a validation issue! There's no configured
-    // maven tool named "mvn3.3.8"!
-    maven "mvn3.3.8"
+    maven "mvn3.3.3"
   }
   
   environment {
@@ -43,15 +41,13 @@ pipeline {
         // You can use steps that take another block of steps as an argument,
         // like this.
         //
-        // But wait! Another validation issue! Two, actually! I didn't use the
-        // right type for "time" and had a typo in "unit".
-        timeout(time: true, uint: 'MINUTES') {
+        timeout(time: 5, unit: 'MINUTES') {
           echo "We're not doing anything particularly special here."
           echo "Just making sure that we don't take longer than five minutes"
           echo "Which, I guess, is kind of silly."
           
           // This'll output 3.3.3, since that's the Maven version we
-          // configured above. Well, once we fix the validation error!
+          // configured above. 
           sh "mvn -version" 
         }
       }
