@@ -15,13 +15,21 @@ pipeline {
   stages {
     stage('foo') {
       when {
-        expression {
-          echo "Branch: ${env.BRANCH_NAME}"
-          return env.BRANCH_NAME == "pants" || env.BRANCH_NAME == "jenkins-42498"
-        }
+        branch "jenkins-42498
       }
       steps {
         echo "Hi there, ${env.REST_API_URL}"
+      }
+    }
+    stage('bar') {
+      when {
+        expression {
+          echo "REST_API_URL: ${REST_API_URL}"
+          return true
+        }
+      }
+      steps {
+        echo "Huh"
       }
     }
   }
