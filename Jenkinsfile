@@ -1,7 +1,8 @@
+def getCount() { return 10 }
 pipeline {
 
   options {
-    buildDiscarder(logRotator(numToKeepStr: '10'))
+    buildDiscarder(logRotator(numToKeepStr: "${defCount()}"))
   }
 
   agent {
@@ -9,7 +10,7 @@ pipeline {
   }
 
   environment {
-    REST_API_URL = "${env.BRANCH_NAME == 'master' ? 'https://one-url' : 'https://two-url'}"
+    REST_API_URL = "pants"
   }
 
   stages {
