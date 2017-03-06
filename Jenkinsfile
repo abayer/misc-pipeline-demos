@@ -2,7 +2,7 @@ def getCount() { return 10 }
 pipeline {
 
   options {
-    buildDiscarder(logRotator(numToKeepStr: "${defCount()}"))
+    buildDiscarder(logRotator(numToKeepStr: "${getCount()}"))
   }
 
   agent {
