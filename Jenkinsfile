@@ -9,7 +9,7 @@ pipeline {
   }
 
   environment {
-    REST_API_URL = "${env.BRANCH_NAME == 'master' ? 'https://one-url' : 'https://two-url'}"
+    REST_API_URL = "${env.BRANCH_NAME}pants"
   }
 
   stages {
