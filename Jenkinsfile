@@ -16,6 +16,7 @@ pipeline {
     stage('foo') {
       when {
         expression {
+          echo "Branch: ${env.BRANCH_NAME}"
           return env.BRANCH_NAME == "pants" || env.BRANCH_NAME == "jenkins-42498"
         }
       }
