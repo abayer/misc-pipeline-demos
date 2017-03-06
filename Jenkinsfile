@@ -1,9 +1,9 @@
-def getCount() { return 10 }
+def getStr() { return "pants" }
 pipeline {
 
-  options {
-    buildDiscarder(logRotator(numToKeepStr: "${getCount()}"))
-  }
+    parameters {
+      booleanParam(defaultValue: true, description: '', name: "${getStr()}")
+    }
 
   agent {
     label ''
