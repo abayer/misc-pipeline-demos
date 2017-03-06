@@ -15,7 +15,7 @@ pipeline {
   stages {
     stage('foo') {
       when {
-        branch "jenkins-42498
+        branch "jenkins-42498"
       }
       steps {
         echo "Hi there, ${env.REST_API_URL}"
