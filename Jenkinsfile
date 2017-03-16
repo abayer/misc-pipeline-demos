@@ -7,7 +7,7 @@ pipeline {
         stage('Example') {
             steps {
                 echo 'Hello World'
-                echo "DEBUGGING WITH CHANGES"
+                echo "DEBUGGING WITH CHANGES again"
             }
         }
     }
