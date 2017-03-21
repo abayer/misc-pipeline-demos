@@ -3,4 +3,9 @@
 import org.foo.Foo
 
 Foo f = new Foo()
-org.foo.Bar b = f.bar
+node {
+  stage("baaaaah") {
+    org.foo.Bar b = f.bar
+    echo "b: ${b.jobUrl}"
+  }
+}
