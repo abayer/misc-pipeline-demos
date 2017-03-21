@@ -3,4 +3,4 @@
 import org.foo.Foo
 
 Foo f = new Foo()
-org.foo.Zot z = f.zot
+org.foo.Bar b = f.bar
