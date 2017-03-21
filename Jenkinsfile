@@ -1,38 +1,5 @@
-pipeline {
-    agent {
-        docker {
-            label "docker"
-            image "maven:3.3-jdk-8"
-        }
-    }
+import org.jenkinsci.plugins.docker.workflow.Docker
+import org.foo.Zot
 
-    stages {
-        stage("is this real?") {
-            steps {
-                echo "Oh look, a stage"
-            }
-        }
-
-        stage("is java installed?") {
-            when {
-                expression {
-                    sh "java -version"
-                }
-            }
-            steps {
-                echo "Yup, Java is installed"
-            }
-        }
-
-        stage("is Maven installed?") {
-            when {
-                expression {
-                    sh "mvn -version"
-                }
-            }
-            steps {
-                echo "Yup, Maven is installed"
-            }
-        }
-    }
-}
+Zot z = new Zot()
+Docker d = z.docker
