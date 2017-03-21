@@ -1,3 +1,5 @@
+@Library("zot@master") _
+
 import org.jenkinsci.plugins.docker.workflow.Docker
 import org.foo.Zot
 
