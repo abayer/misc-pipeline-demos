@@ -1,6 +1,6 @@
 @Library("zot@master") _
 
-import org.foo.Zot
+import org.foo.Foo
 
-Zot z = new Zot(script)
-org.jenkinsci.plugins.docker.workflow.Docker d = z.docker
+Foo f = new Foo()
+org.foo.Zot z = f.zot
