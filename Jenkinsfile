@@ -1,11 +1,7 @@
 @Library("zot@master") _
 
-import org.foo.Foo
-
-Foo f = new Foo()
 node {
-  stage("baaaaah") {
-    org.foo.Bar b = f.bar
-    echo "b: ${b.jobUrl}"
+  stage("Test"){
+    com.dohbedoh.example.MyObject testObject = myobjects.MY_OBJECT_1
   }
 }
