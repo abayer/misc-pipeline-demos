@@ -1,10 +1,10 @@
 pipeline {
     environment {
         MICROSERVICE_NAME = "directory"
-        IMAGE_NAME = "quay.io/svc/${env.MICROSERVICE_NAME}"
+        IMAGE_NAME = "quay.io/svc/${MICROSERVICE_NAME}"
 
-        IMAGE_ID = "${env.IMAGE_NAME}:${env.TAG_NAME}"
-        TAG_NAME = "${(env.BRANCH_NAME + "_" + env.BUILD_ID).replaceAll("[.:/\\\\#]", '-')}"
+        IMAGE_ID = "${IMAGE_NAME}:${TAG_NAME}"
+        TAG_NAME = "${BRANCH_NAME + "_" + BUILD_ID).replaceAll("[.:/\\\\#]", '-'}"
     }
     agent {
         label "some-label"
