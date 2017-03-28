@@ -4,7 +4,7 @@ pipeline {
         IMAGE_NAME = "quay.io/svc/${MICROSERVICE_NAME}"
 
         IMAGE_ID = "${IMAGE_NAME}:${TAG_NAME}"
-        TAG_NAME = "${BRANCH_NAME + "_" + BUILD_ID).replaceAll("[.:/\\\\#]", '-'}"
+        TAG_NAME = "${BRANCH_NAME + "_" + BUILD_ID}" //.replaceAll("[.:/\\\\#]", '-')}"
     }
     agent {
         label "some-label"
