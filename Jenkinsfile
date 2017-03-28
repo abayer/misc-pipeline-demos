@@ -13,10 +13,10 @@ pipeline {
     stages {
         stage("foo") {
             steps {
-                sh 'echo "MICROSERVICE_NAME is ${env.MICROSERVICE_NAME}"'
-                sh 'echo "IMAGE_NAME is ${env.IMAGE_NAME}"'
-                sh 'echo "IMAGE_ID is ${env.IMAGE_ID}"'
-                sh 'echo "TAG_NAME is ${env.TAG_NAME}"'
+                echo "MICROSERVICE_NAME is ${env.MICROSERVICE_NAME}"
+                echo "IMAGE_NAME is ${env.IMAGE_NAME}"
+                echo "IMAGE_ID is ${env.IMAGE_ID}"
+                echo "TAG_NAME is ${env.TAG_NAME}"
             }
         }
     }
