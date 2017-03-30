@@ -1,8 +1,6 @@
-@Library("zot@master") _
+@Library("fxtest@submitToTreeherder") _
 
-import org.foo.Resolve
-
-def r = new Resolve()
-echo r.aThing()
-
-echoThing()
+        submitToTreeherder(
+          project: 'fxapom',
+          jobSymbol: 'T',
+          jobName: 'Tests')
