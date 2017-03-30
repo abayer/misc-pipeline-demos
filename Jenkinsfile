@@ -1,8 +1,3 @@
-@Library("fxtest@submitToTreeherder") _
+@Library("zot@master") _
 
-node {
-  submitToTreeherder(
-    'fxapom',
-    'T',
-    'Tests')
-}
+echoThing(firstString: "hey", secondString: "there")
