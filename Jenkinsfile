@@ -11,7 +11,6 @@ def capabilities = [
 pipeline {
   agent any
   options {
-    ansiColor('xterm')
     timestamps()
     timeout(time: 1, unit: 'HOURS')
   }
