@@ -1,6 +1,8 @@
 @Library("fxtest@submitToTreeherder") _
 
-        submitToTreeherder(
-          'fxapom',
-          'T',
-          'Tests')
+node {
+  submitToTreeherder(
+    'fxapom',
+    'T',
+    'Tests')
+}
