@@ -32,9 +32,9 @@ pipeline {
         sh "echo tox -e py27"
         echo 'pre-submitToTreeherder'
         submitToTreeherder(
-          project: 'fxapom',
-          jobSymbol: 'T',
-          jobName: 'Tests')
+          'fxapom',
+          'T',
+          'Tests')
         echo 'post-submitToTreeherder'
       }
     }
