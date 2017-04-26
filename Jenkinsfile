@@ -16,7 +16,8 @@ pipeline {
     stages {
         stage('huh') {
             steps {
-               echo "branch? ${params.BRANCH}"
+                sleep 5
+                echo "branch? ${params.BRANCH}"
             }
         }
     }
