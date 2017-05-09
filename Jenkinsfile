@@ -7,7 +7,7 @@ pipeline {
         TAG_NAME = "${(BRANCH_NAME + "_" + BUILD_ID).replaceAll("[.:/\\\\#]", '-')}"
     }
     agent {
-        label "some-label"
+        label "master"
     }
 
     stages {
