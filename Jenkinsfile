@@ -13,6 +13,7 @@ pipeline {
     stages {
         stage("foo") {
             steps {
+                checkout scm
                 echo "MICROSERVICE_NAME is ${env.MICROSERVICE_NAME}"
                 echo "IMAGE_NAME is ${env.IMAGE_NAME}"
                 echo "IMAGE_ID is ${env.IMAGE_ID}"
